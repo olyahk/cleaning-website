@@ -1,192 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- "meta" tags describe the page to the browser -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- What shows in the browser tab -->
-  <title>Signature Shine Cleaning</title>
+  <title>Signature Shine LLC | Cleaning in Cedar Falls & Waterloo</title>
 
-  <!-- Connects your CSS file -->
+  <meta name="description" content="Signature Shine LLC offers deep cleans, weekly chores handling, recurring cleaning, move-in/out,  and commercial cleaning in Cedar Falls & Waterloo." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Top bar -->
   <header class="header">
     <div class="container header__inner">
-      <a class="logo" href="#top">Signature Shine</a>
+      <a class="logo" href="#top">Signature Shine LLC</a>
 
-      <!-- Mobile menu button (works with JS) -->
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
 
-      <!-- Navigation links jump to sections using #ids -->
       <nav class="nav" id="nav">
         <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact" class="nav__cta">Get a Quote</a>
+        <a href="#areas">Service Area</a>
+        <a href="#contact" class="nav__cta">Get Free Estimate</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero section -->
   <main id="top">
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__text">
-          <h1>Reliable cleaning for busy people.</h1>
+          <h1>Save time for more important things.</h1>
           <p>
-            Homes, apartments, move-in/move-out, and deep cleans in Cedar Falls & nearby areas.
+            Deep cleans, recurring cleaning, move-in/out, and commercial cleaning in
+            <strong>Cedar Falls</strong> & <strong>Waterloo</strong>.
           </p>
 
           <div class="hero__actions">
-            <a class="btn" href="#contact">Request a Quote</a>
-            <a class="btn btn--ghost" href="#services">See Services</a>
+            <!-- Scroll button -->
+            <a class="btn" href="#contact">Get Free Estimate</a>
+
+            <!-- Text button (pre-written message). Replace PHONE below. -->
+            <a class="btn btn--ghost" id="textBtn" href="#">
+              Call/Text Now
+            </a>
           </div>
 
           <ul class="hero__badges">
-            <li>✅ Supplies available</li>
-            <li>✅ Flexible scheduling</li>
-            <li>✅ Clear pricing</li>
+            <li>✅ Weekly • Biweekly • Monthly</li>
+            <li>✅ Residential + Commercial</li>
+            <li>✅ Fast replies</li>
           </ul>
+
+          <p class="tiny muted" id="textHint"></p>
         </div>
 
+        <!-- Quick estimate form (email-based for now) -->
         <div class="hero__card">
-          <h3>Quick quote</h3>
-          <p class="muted">Tell me what you need — I’ll reply fast.</p>
+          <h3>Free estimate request</h3>
+          <p class="muted">Fill this out — it’ll open an email draft to send.</p>
 
-          <form class="form" id="quoteForm">
+          <form class="form" id="estimateForm">
             <label>
               Name
               <input type="text" name="name" required />
             </label>
 
             <label>
-              Phone or Email
-              <input type="text" name="contact" required />
+              Phone
+              <input type="tel" name="phone" />
             </label>
 
             <label>
-              Type of clean
-              <select name="type">
-                <option>Standard</option>
+              Email
+              <input type="email" name="email" />
+            </label>
+
+            <label>
+              Service type
+              <select name="service">
                 <option>Deep clean</option>
-                <option>Move-in / Move-out</option>
+                <option>Weekly cleaning</option>
+                <option>Biweekly cleaning</option>
+                <option>Monthly cleaning</option>
+                <option>Move-in / Move-out clean</option>
+                <option>Commercial cleaning</option>
               </select>
             </label>
 
-            <button class="btn" type="submit">Send</button>
+            <label>
+              Bedrooms / Bathrooms (or business type)
+              <input type="text" name="size" placeholder="Example: 2 bed / 1 bath" />
+            </label>
+
+            <label>
+              Preferred day/time
+              <input type="text" name="time" placeholder="Example: Friday afternoon" />
+            </label>
+
+            <button class="btn" type="submit">Create Email</button>
             <p class="tiny muted" id="formNote"></p>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- SERVICES -->
     <section class="section" id="services">
       <div class="container">
         <h2>Services</h2>
-        <p class="muted">Pick what fits your schedule and your space.</p>
+        <p class="muted">Choose what you need — we’ll tailor the estimate to your space.</p>
 
         <div class="grid">
           <article class="card">
-            <h3>Standard Clean</h3>
-            <p>Kitchen, bathroom, dusting, floors, surfaces, tidy reset.</p>
+            <h3>Deep Cleans</h3>
+            <p>Detailed reset cleaning for kitchens, bathrooms, floors, surfaces, and buildup areas.</p>
           </article>
 
           <article class="card">
-            <h3>Deep Clean</h3>
-            <p>Extra detail: baseboards, buildup areas, inside microwave, more time.</p>
+            <h3>Weekly / Biweekly / Monthly</h3>
+            <p>Recurring cleaning to keep your home consistently fresh with a simple routine plan.</p>
           </article>
 
           <article class="card">
             <h3>Move-In / Move-Out</h3>
-            <p>Empty-home cleaning: cabinets, appliances exterior, floors, bathrooms.</p>
+            <p>Perfect for deposits and fresh starts — empty-home focused cleaning.</p>
+          </article>
+
+          <article class="card">
+            <h3>Commercial Cleaning</h3>
+            <p>Gyms, dental offices, dance studios, and more — clean spaces that feel professional.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section section--alt" id="pricing">
+    <!-- AREAS -->
+    <section class="section section--alt" id="areas">
       <div class="container">
-        <h2>Pricing</h2>
-        <p class="muted">Simple starting points — final price depends on size + condition.</p>
-
-        <div class="grid">
+        <h2>Service Area</h2>
+        <div class="grid grid--2">
           <article class="card">
-            <h3>Studio / 1 bed</h3>
-            <p class="price">$—</p>
-            <p class="muted">Standard clean starting price</p>
+            <h3>Cedar Falls</h3>
+            <p class="muted">Primary service area.</p>
           </article>
-
           <article class="card">
-            <h3>2–3 bed</h3>
-            <p class="price">$—</p>
-            <p class="muted">Standard clean starting price</p>
+            <h3>Waterloo</h3>
+            <p class="muted">Also available in nearby areas — ask when you request an estimate.</p>
           </article>
-
-          <article class="card">
-            <h3>Deep clean add-on</h3>
-            <p class="price">+$—</p>
-            <p class="muted">Extra time + detail</p>
-          </article>
-        </div>
-
-        <p class="tiny muted">Tip: Replace the $— with your real numbers when ready.</p>
-      </div>
-    </section>
-
-    <!-- Reviews -->
-    <section class="section" id="reviews">
-      <div class="container">
-        <h2>Reviews</h2>
-
-        <div class="grid">
-          <blockquote class="card">
-            <p>“Super thorough and friendly. My apartment looked brand new.”</p>
-            <footer class="muted">— Client name</footer>
-          </blockquote>
-
-          <blockquote class="card">
-            <p>“Loved the attention to detail. Scheduling was easy.”</p>
-            <footer class="muted">— Client name</footer>
-          </blockquote>
-
-          <blockquote class="card">
-            <p>“Perfect move-out clean. Got my deposit back.”</p>
-            <footer class="muted">— Client name</footer>
-          </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section section--alt" id="contact">
+    <!-- CONTACT -->
+    <section class="section" id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <p class="muted">Text/email is easiest. You can also DM on Instagram.</p>
+        <p class="muted">Fastest: text. Also happy to email.</p>
 
         <div class="contact">
           <div class="card">
-            <h3>Business info</h3>
-            <p><strong>Service area:</strong> Cedar Falls + nearby</p>
-            <p><strong>Hours:</strong> By appointment</p>
-            <p><strong>Email:</strong> your@email.com</p>
-            <p><strong>Phone:</strong> (xxx) xxx-xxxx</p>
+            <h3>Get in touch</h3>
+            <p><strong>Email:</strong> <a href="mailto:services@signatureshine.company">services@signatureshine.company</a></p>
+
+            <!-- Replace PHONE below (same as JS) -->
+            <p><strong>Phone:</strong> <span class="muted">(641)750-9796</span></p>
+
+            <div class="hero__actions" style="margin-top: 12px;">
+              <a class="btn" href="mailto:services@signatureshine.company?subject=Free%20Estimate%20Request%20-%20Signature%20Shine%20LLC">
+                Email for Estimate
+              </a>
+              <a class="btn btn--ghost" id="textBtn2" href="#">Text With Message</a>
+            </div>
+
+            <p class="tiny muted">
+              Call/Text buttons to it.
+            </p>
           </div>
 
           <div class="card">
-            <h3>What to include in a quote request</h3>
+            <h3>What to include</h3>
             <ul>
-              <li>Bedrooms / bathrooms</li>
-              <li>Any pets?</li>
+              <li>Home size (beds/baths) or business type</li>
               <li>Standard vs deep clean</li>
+              <li>Any pets</li>
               <li>Preferred day/time</li>
+              <li>Address / neighborhood (optional at first)</li>
             </ul>
           </div>
         </div>
@@ -196,11 +195,10 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="muted">© <span id="year"></span> Signature Shine • Built on GitHub Pages</p>
+      <p class="muted">© <span id="year"></span> Signature Shine LLC</p>
     </div>
   </footer>
 
-  <!-- Connects your JS file (at the bottom so the page loads first) -->
   <script src="script.js"></script>
 </body>
 </html>
