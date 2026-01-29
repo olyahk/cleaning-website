@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- "meta" tags describe the page to the browser -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- What shows in the browser tab -->
+  <title>Signature Shine Cleaning</title>
+
+  <!-- Connects your CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top">Signature Shine</a>
+
+      <!-- Mobile menu button (works with JS) -->
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <!-- Navigation links jump to sections using #ids -->
+      <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav__cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1>Reliable cleaning for busy people.</h1>
+          <p>
+            Homes, apartments, move-in/move-out, and deep cleans in Cedar Falls & nearby areas.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#contact">Request a Quote</a>
+            <a class="btn btn--ghost" href="#services">See Services</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li>✅ Supplies available</li>
+            <li>✅ Flexible scheduling</li>
+            <li>✅ Clear pricing</li>
+          </ul>
+        </div>
+
+        <div class="hero__card">
+          <h3>Quick quote</h3>
+          <p class="muted">Tell me what you need — I’ll reply fast.</p>
+
+          <form class="form" id="quoteForm">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Phone or Email
+              <input type="text" name="contact" required />
+            </label>
+
+            <label>
+              Type of clean
+              <select name="type">
+                <option>Standard</option>
+                <option>Deep clean</option>
+                <option>Move-in / Move-out</option>
+              </select>
+            </label>
+
+            <button class="btn" type="submit">Send</button>
+            <p class="tiny muted" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="muted">Pick what fits your schedule and your space.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Standard Clean</h3>
+            <p>Kitchen, bathroom, dusting, floors, surfaces, tidy reset.</p>
+          </article>
+
+          <article class="card">
+            <h3>Deep Clean</h3>
+            <p>Extra detail: baseboards, buildup areas, inside microwave, more time.</p>
+          </article>
+
+          <article class="card">
+            <h3>Move-In / Move-Out</h3>
+            <p>Empty-home cleaning: cabinets, appliances exterior, floors, bathrooms.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p class="muted">Simple starting points — final price depends on size + condition.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Studio / 1 bed</h3>
+            <p class="price">$—</p>
+            <p class="muted">Standard clean starting price</p>
+          </article>
+
+          <article class="card">
+            <h3>2–3 bed</h3>
+            <p class="price">$—</p>
+            <p class="muted">Standard clean starting price</p>
+          </article>
+
+          <article class="card">
+            <h3>Deep clean add-on</h3>
+            <p class="price">+$—</p>
+            <p class="muted">Extra time + detail</p>
+          </article>
+        </div>
+
+        <p class="tiny muted">Tip: Replace the $— with your real numbers when ready.</p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <h2>Reviews</h2>
+
+        <div class="grid">
+          <blockquote class="card">
+            <p>“Super thorough and friendly. My apartment looked brand new.”</p>
+            <footer class="muted">— Client name</footer>
+          </blockquote>
+
+          <blockquote class="card">
+            <p>“Loved the attention to detail. Scheduling was easy.”</p>
+            <footer class="muted">— Client name</footer>
+          </blockquote>
+
+          <blockquote class="card">
+            <p>“Perfect move-out clean. Got my deposit back.”</p>
+            <footer class="muted">— Client name</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Text/email is easiest. You can also DM on Instagram.</p>
+
+        <div class="contact">
+          <div class="card">
+            <h3>Business info</h3>
+            <p><strong>Service area:</strong> Cedar Falls + nearby</p>
+            <p><strong>Hours:</strong> By appointment</p>
+            <p><strong>Email:</strong> your@email.com</p>
+            <p><strong>Phone:</strong> (xxx) xxx-xxxx</p>
+          </div>
+
+          <div class="card">
+            <h3>What to include in a quote request</h3>
+            <ul>
+              <li>Bedrooms / bathrooms</li>
+              <li>Any pets?</li>
+              <li>Standard vs deep clean</li>
+              <li>Preferred day/time</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted">© <span id="year"></span> Signature Shine • Built on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- Connects your JS file (at the bottom so the page loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>
