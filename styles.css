@@ -1,60 +1,54 @@
-/* Basic reset so spacing is predictable */
 * { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.5; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.5; color: #111; }
+a { color: inherit; }
 
-/* Reusable layout container */
 .container { width: min(1100px, 92%); margin: 0 auto; }
 
-/* Small reusable text helpers */
 .muted { opacity: 0.75; }
 .tiny { font-size: 0.9rem; }
-.price { font-size: 2rem; margin: 0.5rem 0; }
 
-/* Header */
-.header { position: sticky; top: 0; background: white; border-bottom: 1px solid #eee; z-index: 10; }
-.header__inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
-.logo { text-decoration: none; font-weight: 800; color: #111; }
+.header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; z-index: 10; }
+.header__inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 12px; }
 
+.logo { text-decoration: none; font-weight: 900; }
 .nav { display: flex; gap: 16px; align-items: center; }
-.nav a { text-decoration: none; color: #111; opacity: 0.85; }
+.nav a { text-decoration: none; opacity: 0.85; }
 .nav a:hover { opacity: 1; }
 .nav__cta { padding: 10px 12px; border-radius: 12px; border: 1px solid #ddd; }
 
-/* Mobile menu button */
 .menuBtn { display: none; font-size: 22px; background: transparent; border: 1px solid #ddd; border-radius: 12px; padding: 6px 10px; }
 
-/* Hero */
 .hero { padding: 56px 0; background: #fafafa; }
-.hero__inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: start; }
+.hero__inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 22px; align-items: start; }
 .hero__text h1 { font-size: clamp(2rem, 3.2vw, 3rem); margin: 0 0 10px; }
-.hero__actions { display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap; }
+.hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
 .hero__badges { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 8px; }
 
-/* Sections */
 .section { padding: 56px 0; }
 .section--alt { background: #fafafa; }
 
-/* Card/grid system */
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: white; border: 1px solid #eee; border-radius: 18px; padding: 18px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
 
-/* Buttons */
+.card { background: #fff; border: 1px solid #eee; border-radius: 18px; padding: 18px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.hero__card { background: #fff; border: 1px solid #eee; border-radius: 18px; padding: 18px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+
 .btn {
   display: inline-block;
   background: #111;
-  color: white;
+  color: #fff;
   text-decoration: none;
   border: none;
   border-radius: 14px;
   padding: 12px 14px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
 }
+
 .btn--ghost { background: transparent; color: #111; border: 1px solid #ddd; }
 
-/* Form */
 .form { display: grid; gap: 12px; margin-top: 12px; }
-label { display: grid; gap: 6px; font-weight: 600; }
+label { display: grid; gap: 6px; font-weight: 700; }
 input, select {
   padding: 10px 12px;
   border-radius: 12px;
@@ -62,20 +56,30 @@ input, select {
   font: inherit;
 }
 
-/* Contact layout */
 .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-/* Footer */
 .footer { border-top: 1px solid #eee; padding: 18px 0; }
 .footer__inner { display: flex; justify-content: center; }
 
-/* Responsive (phones/tablets) */
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
+  .grid--2 { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }
 
   .menuBtn { display: inline-block; }
-  .nav { display: none; position: absolute; right: 4%; top: 58px; background: white; border: 1px solid #eee; border-radius: 16px; padding: 12px; flex-direction: column; align-items: stretch; width: 220px; }
+  .nav {
+    display: none;
+    position: absolute;
+    right: 4%;
+    top: 58px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 220px;
+  }
   .nav.is-open { display: flex; }
 }
